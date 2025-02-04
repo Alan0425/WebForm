@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexible Box Layout</title>
+
+<style>
+	#main {
+		height: 300px;
+		margin: 0px;
+		padding: 0px;
+		display: flex;
+		flex-direction: row;
+	}
+	#main > article,#main > nav,#main > aside, header, footer{
+		margin: 5px;
+		padding: 5px;
+		border: 1px solid black;
+		border-radius: 5pt;
+	}
+	#main > article {
+		background-color: teal;
+		flex-grow: 3;
+	}
+
+	#main > nav {
+		background-color: gray;
+		flex-grow: 1;
+	}
+
+	#main > aside {
+		background-color: lightblue;
+		flex-grow: 1;
+	}
+
+	header, footer {
+		display: block;
+		height: 50px;
+		background-color: lightgreen;
+	}
+	
+	@media screen and (max-width : 600px){
+		#main {
+			flex-direction: column;
+		}
+	}
+	
+	@media screen and (min-width : 600px) and (max-width : 1000px){
+		#main > aside {
+			display: none;
+		}
+	}
+	
+	@media screen and (min-width : 1000px){
+		#main > nav {
+			order: 3;
+		}
+	
+		#main > article {
+			order: 1;
+		}
+	
+		#main > aside {
+			order: 2;
+		}
+	}
+
+</style>
+</head>
+
+<body>
+    <header>header</header>
+    <div id="main">
+        <nav>nav</nav>
+        <article>article</article>
+        <aside>aside</aside>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexible Box Layout</title>
+
+<style>
+	h1{
+		color: gray;
+	}
+	@media screen and (max-width : 600px){
+		h1{
+			color: red;
+			font-size: 1.5em;
+		}
+		body{
+			background-color: pink;
+		}
+	}
+	
+	@media screen and (min-width : 600px) and (max-width : 1000px){
+		h1{
+			color: green;
+			font-size: 3em;
+		}
+		body{
+			background-color: lightgreen;
+		}
+	}
+	
+	@media screen and (min-width : 1000px){
+		h1{
+			color: blue;
+			font-size: 5em;
+		}
+		body{
+			background-color: lightblue;
+		}
+	}
+</style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+</html>

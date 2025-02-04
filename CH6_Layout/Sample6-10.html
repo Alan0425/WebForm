@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexible Box Layout</title>
+
+<style>
+.outer{
+	width: 200px;
+}
+.boxitem1,.boxitem2{
+	width: 100px;
+	height: 100px;
+	background: pink;
+	float: left;
+	padding: 5px;
+	border: 5px solid orange;
+	margin: 0px;
+}
+.boxitem1{
+	box-sizing: border-box;
+}
+
+.boxitem2{
+	box-sizing: content-box;
+}
+</style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="boxitem1">CHILD 1</div>
+        <div class="boxitem1">CHILD 1</div>
+    </div>
+    <div class="outer">
+        <div class="boxitem2">CHILD 2</div>
+        <div class="boxitem2">CHILD 2</div>
+    </div>
+</body>
+</html>
